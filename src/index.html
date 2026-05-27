@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;" />
+  <title>TXTK.ZIP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">▣</span>
+      <span class="brand-name">TXTK<span class="dot">.</span>ZIP</span>
+      <span class="brand-tag">BRØNNØYSUND OPPSLAG</span>
+    </div>
+    <div class="status" id="status">Klar</div>
+  </header>
+
+  <main class="layout">
+    <section class="search-pane">
+      <div class="search-card">
+        <div class="tabs">
+          <button class="tab active" data-mode="search">Søk navn</button>
+          <button class="tab" data-mode="orgnr">Organisasjonsnr.</button>
+        </div>
+        <div class="search-row">
+          <input id="query" type="text" autocomplete="off"
+                 placeholder="Søk virksomhet — f.eks. Equinor, Norsk Hydro …" />
+          <button id="searchBtn" class="primary">Søk</button>
+        </div>
+        <div class="hint" id="hint">Trykk Enter for å søke. 9-sifret orgnr gir direkteoppslag.</div>
+      </div>
+
+      <div class="results" id="results">
+        <div class="empty">
+          <div class="empty-mark">⌕</div>
+          <div class="empty-text">Begynn med et søk eller et organisasjonsnummer</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-pane" id="detailPane">
+      <div class="detail-empty">
+        <div class="big-mark">▢</div>
+        <div>Velg et resultat for å se detaljer</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footbar">
+    <span>Data: data.brreg.no/enhetsregisteret</span>
+    <span class="sep">·</span>
+    <span>Åpne data — NLOD</span>
+  </footer>
+
+  <script src="web-shim.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
